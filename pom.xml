@@ -3,7 +3,7 @@
 	<groupId>com.opnworks.maven</groupId>
 	<artifactId>artifactory-maven-plugin</artifactId>
 	<packaging>maven-plugin</packaging>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>OpnWorks Artifactory Maven plugin</name>
 	<url>https://github.com/laurent-opnworks/maven-plugins/tree/master/artifactory-maven-plugin</url>
 
@@ -35,7 +35,7 @@
 		<!-- <connection>scm:git:git@github.com:laurent-opnworks/maven-plugins.git</connection> -->
 		<url>https://github.com/laurent-opnworks/artifactory-maven-plugin</url>
 		<!-- <developerConnection>scm:git:git@laurent-opnworks/maven-plugins.git</developerConnection> -->
-	  <tag>artifactory-maven-plugin-1.0.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<properties>
