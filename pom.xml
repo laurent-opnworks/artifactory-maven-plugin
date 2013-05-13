@@ -38,9 +38,10 @@
 	</developers>
 
 	<scm>
+		<connection>scm:git:https://github.com/laurent-opnworks/maven-plugins.git</connection>
 		<developerConnection>scm:git:https://github.com/laurent-opnworks/maven-plugins.git</developerConnection>
 		<!-- <connection>scm:git:git@github.com:laurent-opnworks/maven-plugins.git</connection> -->
-		<url>https://github.com/laurent-opnworks/maven-plugins</url>
+		<url>https://github.com/laurent-opnworks/maven-plugins/artifactory-maven-plugin</url>
 		<!-- <developerConnection>scm:git:git@laurent-opnworks/maven-plugins.git</developerConnection> -->
 	  <tag>HEAD</tag>
   </scm>
