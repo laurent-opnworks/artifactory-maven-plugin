@@ -3,7 +3,7 @@ artifactory-maven-plugin
 
 Maven plugin for Artifactory
 
-*** Usage
+### Usage
 
 ~~~~~~~~~~~~~~~~~~~
 mvn com.opnworks.maven:artifactory-maven-plugin:[VERSION]:removeSnapshots \
@@ -21,7 +21,7 @@ Where:
 				artifactory user credentials 
 ~~~~~~~~~~~~~~~~~~~
 
-*** Example
+### Example
 
 ~~~~~~~~~~~~~~~~~~~
 mvn com.opnworks.maven:artifactory-maven-plugin:1.0.0:removeSnapshots \ 
@@ -33,5 +33,5 @@ mvn com.opnworks.maven:artifactory-maven-plugin:1.0.0:removeSnapshots \
 	-Dartifactory.rootPath=org/apache/maven
 ~~~~~~~~~~~~~~~~~~~
 
-*** Sample response with dryRun=true
+### Sample response with dryRun=true
 
