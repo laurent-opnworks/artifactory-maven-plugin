@@ -1,0 +1,83 @@
+<plugin>
+    <description></description>
+    <groupId>com.opnworks.maven</groupId>
+    <artifactId>maven-artifactory-plugin</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <goalPrefix>zip</goalPrefix>
+    <isolatedRealm>false</isolatedRealm>
+    <inheritedByDefault>true</inheritedByDefault>
+    <mojos>
+        <mojo>
+            <goal>removeSnapshots</goal>
+            <description>Remove released Snapshots</description>
+            <requiresDirectInvocation>false</requiresDirectInvocation>
+            <requiresProject>false</requiresProject>
+            <requiresReports>false</requiresReports>
+            <aggregator>false</aggregator>
+            <requiresOnline>true</requiresOnline>
+            <inheritedByDefault>false</inheritedByDefault>
+            <phase>initialize</phase>
+            <implementation>com.opnworks.maven.artifactory.ArtifactoryPlugin</implementation>
+            <language>java</language>
+            <instantiationStrategy>per-lookup</instantiationStrategy>
+            <executionStrategy>once-per-session</executionStrategy>
+            <parameters>
+                <parameter>
+                    <name>serviceUrl</name>
+                    <type>java.lang.String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description>URL of the Artifactory service</description>
+                </parameter>
+                <parameter>
+                    <name>rootPath</name>
+                    <type>java.lang.String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description>Path to use for snapshot scanning.</description>
+                </parameter>            
+                <parameter>
+                    <name>snapshotRepoKey</name>
+                    <type>java.lang.String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description>Key of snapshot repository.</description>
+                </parameter>                
+                <parameter>
+                    <name>releaseRepoKey</name>
+                    <type>java.lang.String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description>Key of release repository.</description>
+                </parameter>
+                
+                <parameter>
+                    <name>serverId</name>
+                    <type>java.lang.String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description>Id of the server entry containing Artifactory credentials</description>
+                </parameter>
+                
+            </parameters>
+            <configuration>
+                <serviceUrl implementation="java.lang.String">http://artifactory</serviceUrl>
+                <rootPath implementation="java.lang.String">/</rootPath>
+                <snapshotRepoKey implementation="java.lang.String">snapshots</snapshotRepoKey>
+                <releaseRepoKey implementation="java.lang.String">releases</releaseRepoKey>
+            </configuration>
+            <requirements>
+                <requirement>
+                    <role>org.codehaus.plexus.archiver.Archiver</role>
+                    <role-hint>zip</role-hint>
+                    <field-name>zipArchiver</field-name>
+                </requirement>
+            </requirements>
+        </mojo>
+    </mojos>
+    <dependencies>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>1.3.2</version>
+    </dependencies>
+</plugin>

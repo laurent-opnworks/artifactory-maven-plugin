@@ -1,0 +1,64 @@
+<?xml version="1.0" standalone="yes"?>
+
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="repoDetails">
+    <xs:sequence>
+      <xs:element name="configuration" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="key" type="xs:string" minOccurs="0"/>
+      <xs:element name="type" type="repoDetailsType" minOccurs="0"/>
+      <xs:element name="url" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="buildPatternArtifacts">
+    <xs:sequence>
+      <xs:element name="buildName" type="xs:string" minOccurs="0"/>
+      <xs:element name="buildNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="patternResults" type="patternResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="started" type="xs:string" minOccurs="0"/>
+      <xs:element name="url" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="patternResult">
+    <xs:sequence>
+      <xs:element name="patternArtifacts" type="patternArtifact" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="patternArtifact">
+    <xs:sequence>
+      <xs:element name="artifactoryUrl" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastModified" type="xs:string" minOccurs="0"/>
+      <xs:element name="sha1" type="xs:string" minOccurs="0"/>
+      <xs:element name="size" type="xs:long"/>
+      <xs:element name="uri" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="buildPatternArtifactsRequest">
+    <xs:sequence>
+      <xs:element name="buildName" type="xs:string" minOccurs="0"/>
+      <xs:element name="buildNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="patterns" type="pattern" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="transitive" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pattern">
+    <xs:sequence>
+      <xs:element name="pattern" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="repoDetailsType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LOCAL"/>
+      <xs:enumeration value="REMOTE"/>
+      <xs:enumeration value="VIRTUAL"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
