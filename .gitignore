@@ -1,3 +1,10 @@
 /.project
 /target
 /.classpath
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+/.gitignore
