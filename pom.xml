@@ -7,6 +7,12 @@
 	<name>OpnWorks Artifactory Maven plugin</name>
 	<url>https://github.com/laurent-opnworks/maven-plugins/tree/master/artifactory-maven-plugin</url>
 
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -14,20 +20,6 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-
-	<distributionManagement>
-		<repository>
-			<id>releases</id>
-			<name>OpnWorks Releases</name>
-			<url>http://server01.opnworks.com/nexus/content/repositories/public-releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>OpnWorks Snapshots</name>
-			<url>http://server01.opnworks.com/nexus/content/repositories/snapshots/</url>
-			<uniqueVersion>false</uniqueVersion>
-		</snapshotRepository>
-	</distributionManagement>
 
 	<developers>
 		<developer>
