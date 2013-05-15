@@ -7,6 +7,9 @@ For example, if <b>foo-bar-1.0.0</b> was released/published to Artifactory
 then the plugin will delete the <b>foo-bar-1.0.0-SNAPSHOT</b> from the 
 SNAPSHOTS repo.
 
+Typically, one will use a job scheduler such as Jenkins or Hudson to 
+periodically run the plugin.  
+
 ### Usage
 
 ~~~~~~~~~~~~~~~~~~~
