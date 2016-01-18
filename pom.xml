@@ -180,10 +180,10 @@
 								<wadlOption>
 									<wadl>${basedir}/src/main/resources/wadl/artifactoryApi.xml</wadl>
 									<impl>false</impl>
-									<packagename>com.desjardins.jaxrs.codegen.artifactory</packagename>
+									<packagename>com.opnworks.jaxrs.codegen.artifactory</packagename>
 									<schemaPackagenames>
 										<!-- <schemaPackagename>http://superbooks=org.apache.cxf.systest.jaxrs.codegen.schema</schemaPackagename> -->
-										<schemaPackagename>=com.desjardins.jaxrs.codegen.artifactory.schema</schemaPackagename>
+										<schemaPackagename>=com.opnworks.jaxrs.codegen.artifactory.schema</schemaPackagename>
 									</schemaPackagenames>
 									<extraargs>
 										<extraarg>-interface</extraarg>
