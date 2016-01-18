@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://cxf.apache.org/transports/http/configuration"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:cxf="http://cxf.apache.org/core"
+	xmlns:p="http://cxf.apache.org/policy" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:sec="http://cxf.apache.org/configuration/security"
+	xsi:schemaLocation="
+          http://www.springframework.org/schema/beans           http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://cxf.apache.org/jaxrs                           http://cxf.apache.org/schemas/jaxrs.xsd
+          http://cxf.apache.org/transports/http/configuration   http://cxf.apache.org/schemas/configuration/http-conf.xsd
+          http://cxf.apache.org/configuration/security          http://cxf.apache.org/schemas/configuration/security.xsd
+          http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+          http://cxf.apache.org/policy http://cxf.apache.org/schemas/policy.xsd
+          http://www.springframework.org/schema/util
+	      http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+<!-- 	<cxf:bus> -->
+<!-- 	<cxf:features> -->
+<!-- 	<p:policies/> -->
+<!-- 	<cxf:logging/> -->
+<!-- 	</cxf:features> -->
+<!-- 	</cxf:bus> -->
+
+	<jaxrs:client id="storage" address="http://opnworks.com/artifactory/api"
+		serviceClass="com.opnworks.jaxrs.codegen.artifactory.StorageResource">
+		<jaxrs:headers>
+			<entry key="Accept" value="text/xml" />
+		</jaxrs:headers>
+	</jaxrs:client>
+	
+
+</beans>
