@@ -8,7 +8,7 @@
             <doc title="Generated" xml:lang="en"/>
         </include>
     </grammars>
-    <resources base="http://icpvm.desjardins.uni:8081/artifactory/api/" >
+    <resources base="" >
         <resource path="system" >
             <method id="getSystemInfo" name="GET">
                 <response>
