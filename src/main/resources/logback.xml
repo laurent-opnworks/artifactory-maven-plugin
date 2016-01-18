@@ -8,9 +8,6 @@
 		</encoder>
 	</appender>
 
-
-	<logger name="com.desjardins" level="INFO" />
-
 	<root level="INFO">
 		<appender-ref ref="STDOUT" />
 	</root>
