@@ -33,7 +33,7 @@ import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
-import com.desjardins.jaxrs.codegen.artifactory.StorageResource;
+import com.opnworks.jaxrs.codegen.artifactory.StorageResource;
 
 /**
  * Goal that removes released snapshots
